@@ -235,8 +235,8 @@ if selected == "Explore Data":
         df1 = pd.DataFrame(mycursor.fetchall(),columns= ['State', 'Total_Transactions', 'Total_amount'])
         df2 = pd.read_csv('Statenames.csv')
         df1.State = df2
-
-        fig = px.choropleth(df1,geojson="https://gist.githubusercontent.com/jbrobst/56c13bbbf9d97d187fea01ca62ea5112/raw/e388c4cae20aa53cb5090210a42ebb9b765c0a36/india_states.geojson",
+        
+        fig = px.choropleth(df1,geojson="https://gist.githubusercontent.com/Sandhiya-Sadhasivam/36658c549b5db8c2561abc926f9c66f0/raw/3a4996d3566bebbe56d2b4436a858ab4befb1800/india_states.geojson",
                     featureidkey='properties.ST_NM',
                     locations='State',
                     color='Total_amount',
@@ -316,7 +316,7 @@ if selected == "Explore Data":
         df1.Total_Appopens = df1.Total_Appopens.astype(float)
         df1.State = df2
         
-        fig = px.choropleth(df1,geojson="https://gist.githubusercontent.com/jbrobst/56c13bbbf9d97d187fea01ca62ea5112/raw/e388c4cae20aa53cb5090210a42ebb9b765c0a36/india_states.geojson",
+        fig = px.choropleth(df1,geojson="https://gist.githubusercontent.com/Sandhiya-Sadhasivam/36658c549b5db8c2561abc926f9c66f0/raw/3a4996d3566bebbe56d2b4436a858ab4befb1800/india_states.geojson",
                     featureidkey='properties.ST_NM',
                     locations='State',
                     color='Total_Appopens',
