@@ -1,6 +1,6 @@
 # Importing Libraries
 import pandas as pd
-import mysql.connector as sql
+import mysql.connector
 import streamlit as st
 import plotly.express as px
 import os
@@ -31,7 +31,7 @@ st.sidebar.image("img.png")
 
 
 #connecting mysql
-mydb = sql.connect(host=st.secrets["DBhost"],
+mydb = mysql.connector.connect(host=st.secrets["DBhost"],
                    user=st.secrets["DBuser"],
                    password=st.secrets["DBpass"],
                    database= st.secrets["DBname"]
