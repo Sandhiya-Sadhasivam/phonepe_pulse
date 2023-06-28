@@ -31,10 +31,10 @@ st.sidebar.image("img.png")
 
 
 #connecting mysql
-mydb = sql.connect(host="localhost",
-                   user="root",
-                   password="root",
-                   database= "phonepe"
+mydb = sql.connect(host=st.secrets["DBhost"],
+                   user=st.secrets["DBuser"],
+                   password=st.secrets["DBpass"],
+                   database= st.secrets["DBname"]
                   )
 mycursor = mydb.cursor(buffered=True)
 
