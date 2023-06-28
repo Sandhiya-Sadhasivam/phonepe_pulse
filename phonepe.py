@@ -63,7 +63,7 @@ if selected=="Home":
 
     col1,col2=st.columns([4,1],gap="small")
     with col1:
-        st.image("Home1.png")
+        st.image("home.png")
     with col2:
          st.write(" ")
          st.write(" ")
